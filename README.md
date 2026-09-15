@@ -1,16 +1,15 @@
 # ml-coding-practice
 
-Small daily exercises: read an explanation, implement one function, then run its test. Exercise instructions are in English; Python syntax basics are skipped.
+Daily hands-on practice with repeated use of earlier concepts. English explanations and examples live directly in each exercise's Python docstrings. DSA practice is separate.
 
-## Current practice
+## Practice log
 
-[Day 1: NumPy basics](week01_numpy_logreg/day01_numpy/README.md)
+- Day 1 — completed: NumPy basics, slicing, masks, axes, reshape, and simple broadcasting. 29 tests passed at completion.
+- Day 2 — next: [gradebook.py](week01_numpy_logreg/day02_gradebook/gradebook.py). Process one shared dataset, then combine your functions into a report. Eight core functions (~40 minutes) and one optional exercise.
 
-Start with creating arrays, reading shapes, and selecting columns. Then try elementwise arithmetic and row sums. Allow about 20–30 minutes, and stop after the first three exercises if you want more time with the basics.
+The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
-The broader direction is NumPy → Logistic Regression. We will introduce reshaping and broadcasting before normalization, losses, gradients, and training. The pace will follow your progress rather than a fixed seven-day deadline.
-
-## Getting started
+## Setup
 
 Run from the repository root:
 
@@ -18,8 +17,18 @@ Run from the repository root:
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-# Start with just exercise 1:
-python -m pytest -q week01_numpy_logreg/day01_numpy -k make_array
 ```
 
-The starter functions intentionally raise `NotImplementedError`; each test will fail until you implement its function. No solution implementations are included.
+## Day 2
+
+Read and implement one function at a time in `gradebook.py`:
+
+```bash
+python -m pytest -q week01_numpy_logreg/day02_gradebook -k course_means
+# All core exercises (skip the optional needs_support exercise):
+python -m pytest -q week01_numpy_logreg/day02_gradebook -k 'not needs_support'
+# Both days, including optional work:
+python -m pytest -q week01_numpy_logreg
+```
+
+New starter functions intentionally raise `NotImplementedError`. Tests for unfinished functions will fail. Day 1 contains your completed work; Day 2 contains no solution implementations.
