@@ -7,6 +7,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 - Day 1 — completed: NumPy basics, slicing, masks, axes, reshape, and simple broadcasting. 29 tests passed at completion.
 - Day 2 — completed: [gradebook.py](week01_numpy_logreg/day02_gradebook/gradebook.py). Process one shared dataset, then combine your functions into a report. All 22 tests passed at completion.
 
+- Day 3 — completed: [sales_practice.py](week01_numpy_logreg/day03_sales/sales_practice.py). Sales analysis, broadcasting, and matrix-vector multiplication; all 17 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -19,19 +21,20 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 3 — completed (17 tests passed)
+## Day 4 — completed: prediction errors and evaluation (21 tests passed)
 
-Open [sales_practice.py](week01_numpy_logreg/day03_sales/sales_practice.py): seven core exercises (~40–50 minutes) and one optional review, from shop sales calculations to `X @ w + b`. Type and shape contracts, short tasks, and examples are inside the functions. Repeat the NumPy operations directly rather than calling earlier exercise functions.
+Open [revenue_evaluation.py](week01_numpy_logreg/day04_evaluation/revenue_evaluation.py): seven exercises (~40–50 minutes), from repeated prediction to signed errors, MAE, MSE, filtering, model comparison, and a complete evaluation report. All teaching notes and complete examples are in the function docstrings. Implement NumPy operations directly in each function.
 
 ```bash
-python -m pytest -q week01_numpy_logreg/day03_sales -k daily_revenue
-# All core exercises (skip the optional center_sales exercise):
-python -m pytest -q week01_numpy_logreg/day03_sales -k 'not center_sales'
-# All days, including optional work:
+# Start with one function:
+python -m pytest -q week01_numpy_logreg/day04_evaluation -k predict_revenue
+# All Day 4 exercises:
+python -m pytest -q week01_numpy_logreg/day04_evaluation
+# All days:
 python -m pytest -q week01_numpy_logreg
 ```
 
-New starter functions intentionally raise `NotImplementedError`. Tests for unfinished functions will fail. Days 1–3 contain your completed work. All 68 tests passed at Day 3 completion.
+Days 1–4 contain your completed work. All 89 tests passed at Day 4 completion.
 
 ## Exercise format
 
