@@ -13,6 +13,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 5 — implemented with guidance: [gradient_practice.py](week01_numpy_logreg/day05_gradient_step/gradient_practice.py). All 21 tests passed; gradient intuition needs reinforcement.
 
+- Day 6 — completed: [bias_practice.py](week01_numpy_logreg/day06_bias_intuition/bias_practice.py). Parameter effects, bias slope, and a single update; all 17 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -25,20 +27,20 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 6 — completed: understand one bias update (17 tests passed)
+## Day 7 — completed: repeat bias updates (15 tests passed)
 
-Open [bias_practice.py](week01_numpy_logreg/day06_bias_intuition/bias_practice.py): five small exercises (~35–45 minutes) using one product. Observe how bias and weight affect predictions, compare three bias choices by MSE, interpret the bias slope, and make one bias update. Detailed Learn sections are inside the functions. There is no transpose, matrix multiplication, or training loop today.
+Open [bias_training.py](week01_numpy_logreg/day07_bias_training/bias_training.py): five exercises (~35–45 minutes), from one update to two explicit updates, a loop, loss history, and a comparison of learning rates. Weight stays fixed. Detailed Learn sections explain which values change, when to recompute, and how to keep separate training runs independent.
 
 ```bash
 # Start with one exercise:
-python -m pytest -q week01_numpy_logreg/day06_bias_intuition -k change_bias
-# All Day 6 exercises:
-python -m pytest -q week01_numpy_logreg/day06_bias_intuition
+python -m pytest -q week01_numpy_logreg/day07_bias_training -k one_update
+# All Day 7 exercises:
+python -m pytest -q week01_numpy_logreg/day07_bias_training
 # All days:
 python -m pytest -q week01_numpy_logreg
 ```
 
-Days 1–6 contain completed implementations. All 127 tests passed at Day 6 completion. Day 6 consolidated bias changes, gradient direction, and a single update.
+Days 1–7 contain completed implementations. All 142 tests passed at Day 7 completion. Day 7 covers repeated bias updates, loss histories, and independent learning-rate comparisons.
 
 ## Exercise format
 
