@@ -11,6 +11,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 4 — completed: [revenue_evaluation.py](week01_numpy_logreg/day04_evaluation/revenue_evaluation.py). Signed errors, MAE, MSE, and model evaluation; all 21 tests passed.
 
+- Day 5 — implemented with guidance: [gradient_practice.py](week01_numpy_logreg/day05_gradient_step/gradient_practice.py). All 21 tests passed; gradient intuition needs reinforcement.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -23,22 +25,20 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 5 — implemented with guidance (21 tests passed)
+## Day 6 — completed: understand one bias update (17 tests passed)
 
-Open [gradient_practice.py](week01_numpy_logreg/day05_gradient_step/gradient_practice.py): six core exercises and one short optional mask review (~40–50 minutes). Repeat prediction and MSE, learn bias/weight gradients and transpose, then update the complete model once. All formulas, independent API examples, and complete task inputs/outputs are inside the functions. Implementations and learning notes are complete; gradient intuition needs reinforcement before a training loop.
+Open [bias_practice.py](week01_numpy_logreg/day06_bias_intuition/bias_practice.py): five small exercises (~35–45 minutes) using one product. Observe how bias and weight affect predictions, compare three bias choices by MSE, interpret the bias slope, and make one bias update. Detailed Learn sections are inside the functions. There is no transpose, matrix multiplication, or training loop today.
 
 ```bash
-# Start with one function:
-python -m pytest -q week01_numpy_logreg/day05_gradient_step -k prediction_snapshot
-# Core work:
-python -m pytest -q week01_numpy_logreg/day05_gradient_step -k 'not remaining_bad_days'
-# All Day 5 work:
-python -m pytest -q week01_numpy_logreg/day05_gradient_step
+# Start with one exercise:
+python -m pytest -q week01_numpy_logreg/day06_bias_intuition -k change_bias
+# All Day 6 exercises:
+python -m pytest -q week01_numpy_logreg/day06_bias_intuition
 # All days:
 python -m pytest -q week01_numpy_logreg
 ```
 
-Days 1–5 contain completed implementations. All 110 tests passed at Day 5 completion. Passing tests does not imply independent mastery: Day 5 introduced too many concepts at once; Day 6 should consolidate them.
+Days 1–6 contain completed implementations. All 127 tests passed at Day 6 completion. Day 6 consolidated bias changes, gradient direction, and a single update.
 
 ## Exercise format
 
