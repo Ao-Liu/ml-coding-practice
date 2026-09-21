@@ -15,6 +15,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 6 — completed: [bias_practice.py](week01_numpy_logreg/day06_bias_intuition/bias_practice.py). Parameter effects, bias slope, and a single update; all 17 tests passed.
 
+- Day 7 — completed: [bias_training.py](week01_numpy_logreg/day07_bias_training/bias_training.py). Repeated bias updates, loss history, and learning-rate comparisons; all 15 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -27,20 +29,20 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 7 — completed: repeat bias updates (15 tests passed)
+## Day 8 — completed: learn one weight and bias together (17 tests passed)
 
-Open [bias_training.py](week01_numpy_logreg/day07_bias_training/bias_training.py): five exercises (~35–45 minutes), from one update to two explicit updates, a loop, loss history, and a comparison of learning rates. Weight stays fixed. Detailed Learn sections explain which values change, when to recompute, and how to keep separate training runs independent.
+Open [linear_training.py](week02_linear_models/day08_weight_and_bias/linear_training.py): five exercises (~35–45 minutes). Compare three weights, understand the weight gradient, update weight alone, update both parameters once, then repeat with a loss history. Continue the one-product shop with scalar parameters and detailed Learn sections. No matrix multiplication or transpose today.
 
 ```bash
 # Start with one exercise:
-python -m pytest -q week01_numpy_logreg/day07_bias_training -k one_update
-# All Day 7 exercises:
-python -m pytest -q week01_numpy_logreg/day07_bias_training
+python -m pytest -q week02_linear_models/day08_weight_and_bias -k compare_weights
+# All Day 8 exercises:
+python -m pytest -q week02_linear_models/day08_weight_and_bias
 # All days:
-python -m pytest -q week01_numpy_logreg
+python -m pytest -q week01_numpy_logreg week02_linear_models
 ```
 
-Days 1–7 contain completed implementations. All 142 tests passed at Day 7 completion. Day 7 covers repeated bias updates, loss histories, and independent learning-rate comparisons.
+Days 1–8 contain completed implementations. All 159 tests passed at Day 8 completion.
 
 ## Exercise format
 
