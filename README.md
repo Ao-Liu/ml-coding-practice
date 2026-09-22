@@ -17,6 +17,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 7 — completed: [bias_training.py](week01_numpy_logreg/day07_bias_training/bias_training.py). Repeated bias updates, loss history, and learning-rate comparisons; all 15 tests passed.
 
+- Day 8 — completed: [linear_training.py](week02_linear_models/day08_weight_and_bias/linear_training.py). Learning one weight and bias together; all 17 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -29,20 +31,20 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 8 — completed: learn one weight and bias together (17 tests passed)
+## Day 9 — completed: two products, separate weight calculations (16 tests passed)
 
-Open [linear_training.py](week02_linear_models/day08_weight_and_bias/linear_training.py): five exercises (~35–45 minutes). Compare three weights, understand the weight gradient, update weight alone, update both parameters once, then repeat with a loss history. Continue the one-product shop with scalar parameters and detailed Learn sections. No matrix multiplication or transpose today.
+Open [two_product_training.py](week02_linear_models/day09_two_products/two_product_training.py): five exercises (~35–45 minutes). Select sales columns, predict total revenue, change only A's weight, calculate each gradient separately, then update and train all three parameters. Detailed Learn sections connect the shared daily error to each product's influence. No transpose or matrix multiplication today.
 
 ```bash
 # Start with one exercise:
-python -m pytest -q week02_linear_models/day08_weight_and_bias -k compare_weights
-# All Day 8 exercises:
-python -m pytest -q week02_linear_models/day08_weight_and_bias
+python -m pytest -q week02_linear_models/day09_two_products -k predict_two_products
+# All Day 9 exercises:
+python -m pytest -q week02_linear_models/day09_two_products
 # All days:
 python -m pytest -q week01_numpy_logreg week02_linear_models
 ```
 
-Days 1–8 contain completed implementations. All 159 tests passed at Day 8 completion.
+Days 1–9 contain completed implementations. All 175 tests passed at Day 9 completion.
 
 ## Exercise format
 
