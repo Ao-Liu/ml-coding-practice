@@ -19,6 +19,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 8 — completed: [linear_training.py](week02_linear_models/day08_weight_and_bias/linear_training.py). Learning one weight and bias together; all 17 tests passed.
 
+- Day 9 — completed: [two_product_training.py](week02_linear_models/day09_two_products/two_product_training.py). Separate product gradients, joint updates, and training; all 16 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -31,20 +33,18 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 9 — completed: two products, separate weight calculations (16 tests passed)
+## Day 10 — completed: connect separate gradients to vectors (16 tests passed)
 
-Open [two_product_training.py](week02_linear_models/day09_two_products/two_product_training.py): five exercises (~35–45 minutes). Select sales columns, predict total revenue, change only A's weight, calculate each gradient separately, then update and train all three parameters. Detailed Learn sections connect the shared daily error to each product's influence. No transpose or matrix multiplication today.
+Open [vector_practice.py](week02_linear_models/day10_vector_gradients/vector_practice.py): five exercises (~35–45 minutes). Predict with @, inspect transpose on its own, sum each product's sales times supplied errors, calculate vector gradients, and perform one joint update. Rectangular examples and detailed Learn sections connect every operation to Day 9. No new loss or training loop today.
 
 ```bash
-# Start with one exercise:
-python -m pytest -q week02_linear_models/day09_two_products -k predict_two_products
-# All Day 9 exercises:
-python -m pytest -q week02_linear_models/day09_two_products
+python -m pytest -q week02_linear_models/day10_vector_gradients -k predict_vector
+python -m pytest -q week02_linear_models/day10_vector_gradients
 # All days:
 python -m pytest -q week01_numpy_logreg week02_linear_models
 ```
 
-Days 1–9 contain completed implementations. All 175 tests passed at Day 9 completion.
+Days 1–10 contain completed implementations. All 191 tests passed at Day 10 completion.
 
 ## Exercise format
 
