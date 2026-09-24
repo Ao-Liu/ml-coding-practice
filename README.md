@@ -21,6 +21,10 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 9 — completed: [two_product_training.py](week02_linear_models/day09_two_products/two_product_training.py). Separate product gradients, joint updates, and training; all 16 tests passed.
 
+- Day 10 — completed: [vector_practice.py](week02_linear_models/day10_vector_gradients/vector_practice.py). Vector predictions, transpose, gradients, and one joint update; all 16 tests passed.
+
+- Day 11 — completed: [vector_training.py](week02_linear_models/day11_vector_training/vector_training.py). Vector training loops, independent weights, loss history, and error inspection; all 14 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -33,18 +37,18 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 10 — completed: connect separate gradients to vectors (16 tests passed)
+## Day 12 — next: train on earlier days, validate on later days
 
-Open [vector_practice.py](week02_linear_models/day10_vector_gradients/vector_practice.py): five exercises (~35–45 minutes). Predict with @, inspect transpose on its own, sum each product's sales times supplied errors, calculate vector gradients, and perform one joint update. Rectangular examples and detailed Learn sections connect every operation to Day 9. No new loss or training loop today.
+Open [validation_practice.py](week02_linear_models/day12_validation/validation_practice.py): five exercises (~35–45 minutes). Split aligned rows, predict later days, measure validation MSE, train using training rows only, and inspect large validation errors. Gradient formulas stay unchanged; detailed Learn sections explain the purpose of holding data out.
 
 ```bash
-python -m pytest -q week02_linear_models/day10_vector_gradients -k predict_vector
-python -m pytest -q week02_linear_models/day10_vector_gradients
+python -m pytest -q week02_linear_models/day12_validation -k split_days
+python -m pytest -q week02_linear_models/day12_validation
 # All days:
 python -m pytest -q week01_numpy_logreg week02_linear_models
 ```
 
-Days 1–10 contain completed implementations. All 191 tests passed at Day 10 completion.
+Days 1–11 contain completed implementations (205 tests passed). Day 12 functions are blank; their tests initially fail with `NotImplementedError`.
 
 ## Exercise format
 
