@@ -21,7 +21,7 @@ From the repository root:
   python -m pytest -q week02_linear_models/day12_validation -k split_days
 Unfinished exercises intentionally raise NotImplementedError.
 """
-
+from signal import signal
 from typing import Tuple
 import numpy as np
 
@@ -57,7 +57,7 @@ def split_days(sales: np.ndarray, actual: np.ndarray, train_days: int
 
     Pause: what goes wrong if sales and actual use different boundaries?
     """
-    raise NotImplementedError
+    return sales[:train_days], actual[:train_days], sales[train_days:], actual[train_days:]
 
 
 def predict_later_days(validation_sales: np.ndarray, weights: np.ndarray,
@@ -89,7 +89,8 @@ def predict_later_days(validation_sales: np.ndarray, weights: np.ndarray,
 
     Pause: why is there no actual argument or learning rate here?
     """
-    raise NotImplementedError
+    pred = validation_sales @ weights + bias
+    return pred
 
 
 def validation_score(validation_sales: np.ndarray, validation_actual: np.ndarray,
@@ -121,7 +122,10 @@ def validation_score(validation_sales: np.ndarray, validation_actual: np.ndarray
 
     Pause: why must actual revenue stay separate from predicted revenue?
     """
-    raise NotImplementedError
+    pred = validation_sales @ weights + bias
+    signed_err = pred - validation_actual
+    mse = np.mean(signed_err ** 2)
+    return pred, float(mse)
 
 
 def train_and_validate(train_sales: np.ndarray, train_actual: np.ndarray,
@@ -169,7 +173,29 @@ def train_and_validate(train_sales: np.ndarray, train_actual: np.ndarray,
 
     Pause: which arrays should appear inside the gradient calculations?
     """
-    raise NotImplementedError
+    weights = weights.copy()
+    train_pred = train_sales @ weights + bias
+    train_signed_err = train_pred - train_actual
+    n_days = train_sales.shape[0]
+    dw = (2 / n_days) * (train_sales.T @ train_signed_err)
+    db = 2 * np.mean(train_signed_err)
+
+    for _ in range(steps):
+        weights = weights - (dw * learning_rate)
+        bias -= (db * learning_rate)
+        train_pred = train_sales @ weights + bias
+        train_signed_err = train_pred - train_actual
+        dw = (2 / n_days) * (train_sales.T @ train_signed_err)
+        db = 2 * np.mean(train_signed_err)
+
+    train_mse = np.mean(train_signed_err ** 2)
+
+    validation_pred = validation_sales @ weights + bias
+    validation_signed_err = validation_pred - validation_actual
+    validation_mse = np.mean(validation_signed_err ** 2)
+
+    return weights, float(bias), float(train_mse), float(validation_mse)
+
 
 
 def difficult_validation_days(day_ids: np.ndarray, validation_sales: np.ndarray,
@@ -207,4 +233,9 @@ def difficult_validation_days(day_ids: np.ndarray, validation_sales: np.ndarray,
 
     Pause: should a negative error be discarded before checking its magnitude?
     """
-    raise NotImplementedError
+    validation_pred = validation_sales @ weights + bias
+    signed_err = validation_pred - validation_actual
+    keep = np.abs(signed_err) > threshold
+    return day_ids[keep], signed_err[keep]
+
+

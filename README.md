@@ -37,7 +37,7 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 12 — next: train on earlier days, validate on later days
+## Day 12 — completed: train on earlier days, validate on later days (13 tests passed)
 
 Open [validation_practice.py](week02_linear_models/day12_validation/validation_practice.py): five exercises (~35–45 minutes). Split aligned rows, predict later days, measure validation MSE, train using training rows only, and inspect large validation errors. Gradient formulas stay unchanged; detailed Learn sections explain the purpose of holding data out.
 
@@ -48,7 +48,7 @@ python -m pytest -q week02_linear_models/day12_validation
 python -m pytest -q week01_numpy_logreg week02_linear_models
 ```
 
-Days 1–11 contain completed implementations (205 tests passed). Day 12 functions are blank; their tests initially fail with `NotImplementedError`.
+Days 1–12 contain completed implementations. All 218 tests passed at Day 12 completion; the final mask comparison typo was corrected during review.
 
 ## Exercise format
 
