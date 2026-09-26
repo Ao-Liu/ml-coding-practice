@@ -27,6 +27,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 12 — completed: [validation_practice.py](week02_linear_models/day12_validation/validation_practice.py). Training/validation split, fixed-model evaluation, and error masks; all 13 tests passed after correcting a mask comparison typo.
 
+- Day 13 — completed: [scaling_practice.py](week02_linear_models/day13_standardization/scaling_practice.py). Column statistics, standardization, and training-only preprocessing; all 12 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -39,18 +41,18 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 13 — completed: feature standardization (12 tests passed)
+## Day 14 — completed: standardized features through training and validation
 
-Open [scaling_practice.py](week02_linear_models/day13_standardization/scaling_practice.py): five exercises (~35–45 minutes). Review column means and centering, learn population standard deviation, apply provided statistics, then estimate statistics on training rows only and transform both sets. No model training or constant-column handling today; all training feature columns vary.
+Open [scaled_training.py](week02_linear_models/day14_scaled_training/scaled_training.py): five exercises (~40 minutes). Repeat training statistics and transformation, train with standardized features, predict from raw sales using saved statistics, then evaluate a complete pipeline. Detailed teaching and full examples live in the function docstrings.
 
 ```bash
-python -m pytest -q week02_linear_models/day13_standardization -k feature_means
-python -m pytest -q week02_linear_models/day13_standardization
+python -m pytest -q week02_linear_models/day14_scaled_training -k training_stats
+python -m pytest -q week02_linear_models/day14_scaled_training
 # All days:
 python -m pytest -q week01_numpy_logreg week02_linear_models
 ```
 
-Days 1–13 contain completed implementations. All 230 tests passed at Day 13 completion.
+Days 1–14 contain completed implementations. All 242 tests passed at Day 14 completion.
 
 ## Exercise format
 
