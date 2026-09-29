@@ -31,6 +31,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 14 — completed: [scaled_training.py](week02_linear_models/day14_scaled_training/scaled_training.py). Standardized model training, raw-sales prediction, and validation; all 12 tests passed.
 
+- Day 15 — completed: [constant_features.py](week03_linear_models/day15_constant_features/constant_features.py). Constant columns, safe scales, saved statistics, and training; all 16 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -43,18 +45,18 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 15 — completed: constant training columns and safe standardization
+## Day 16 — completed: compare the model with a constant baseline
 
-Open [constant_features.py](week03_linear_models/day15_constant_features/constant_features.py): five exercises (~40 minutes). Review masks and column statistics, replace zero training scales with 1, transform both sets with training statistics, predict, then repeat the training loop. Detailed English explanations and complete examples are inside each function.
+Open [baseline_practice.py](week03_linear_models/day16_baseline/baseline_practice.py): five exercises (~40 minutes). Predict the training mean as a baseline, measure validation MSE, evaluate the fitted model, review error masks, and repeat training before comparing both predictors. Detailed English teaching and complete examples are in the function docstrings.
 
 ```bash
-python -m pytest -q week03_linear_models/day15_constant_features -k constant_products
-python -m pytest -q week03_linear_models/day15_constant_features
+python -m pytest -q week03_linear_models/day16_baseline -k baseline_revenue
+python -m pytest -q week03_linear_models/day16_baseline
 # All days:
 python -m pytest -q week01_numpy_logreg week02_linear_models week03_linear_models
 ```
 
-Days 1–15 are completed. All 258 tests passed at Day 15 completion.
+Days 1–16 are completed. All 274 tests passed at Day 16 completion.
 
 ## Exercise format
 
