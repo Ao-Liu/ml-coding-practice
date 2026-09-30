@@ -199,7 +199,7 @@ def train_and_compare(train_sales: np.ndarray, train_actual: np.ndarray,
         predictions = train_standardized @ weights + bias
         signed_err = predictions - train_actual
 
-    validation_standardized = (validation_sales - train_means) / train_std
+    validation_standardized = (validation_sales - train_means) / train_std # this calculates standardized
     validation_predictions = validation_standardized @ weights + bias
     validation_sign_err = validation_predictions - validation_actual
     m_mse = np.mean(validation_sign_err ** 2)

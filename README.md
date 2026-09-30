@@ -33,6 +33,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 15 — completed: [constant_features.py](week03_linear_models/day15_constant_features/constant_features.py). Constant columns, safe scales, saved statistics, and training; all 16 tests passed.
 
+- Day 16 — completed: [baseline_practice.py](week03_linear_models/day16_baseline/baseline_practice.py). Training-mean baseline, validation MSE, and model improvement; all 16 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -45,18 +47,18 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 16 — completed: compare the model with a constant baseline
+## Day 17 — completed: separate predictions, errors, and comparison scores
 
-Open [baseline_practice.py](week03_linear_models/day16_baseline/baseline_practice.py): five exercises (~40 minutes). Predict the training mean as a baseline, measure validation MSE, evaluate the fitted model, review error masks, and repeat training before comparing both predictors. Detailed English teaching and complete examples are in the function docstrings.
+Open [validation_report.py](week03_linear_models/day17_validation_report/validation_report.py): five exercises (~35–40 minutes). Make baseline predictions visible, convert standardized features into model predictions, compare daily errors, compute MSE reduction, and assemble a validation report. Revisit Day 16's concepts with no new model or gradient formula. Detailed English explanations and full examples are in each function.
 
 ```bash
-python -m pytest -q week03_linear_models/day16_baseline -k baseline_revenue
-python -m pytest -q week03_linear_models/day16_baseline
+python -m pytest -q week03_linear_models/day17_validation_report -k baseline_predictions
+python -m pytest -q week03_linear_models/day17_validation_report
 # All days:
 python -m pytest -q week01_numpy_logreg week02_linear_models week03_linear_models
 ```
 
-Days 1–16 are completed. All 274 tests passed at Day 16 completion.
+Days 1–17 are completed. All 288 tests passed at Day 17 completion.
 
 ## Exercise format
 
