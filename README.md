@@ -39,6 +39,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 18 — completed: [model_selection.py](week03_linear_models/day18_model_selection/model_selection.py). Candidate MSEs, argmin, selected rows, and baseline comparisons; all 15 tests passed.
 
+- Day 19 — completed: [heldout_practice.py](week03_linear_models/day19_heldout_test/heldout_practice.py). Validation selection, fixed-model test scoring, and baseline comparison; all 16 tests passed after correcting baseline length for unequal training/test sizes.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -51,20 +53,22 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 19 — completed: select on validation, score the fixed choice on test
+## Day 20 — completed: one chronological sales pipeline
 
-Open [heldout_practice.py](week03_linear_models/day19_heldout_test/heldout_practice.py): five exercises (~35–40 minutes). Repeat candidate MSEs, row selection, and argmin; use the validation-selected index to score the same model on separate test days, then compare with the training-mean baseline. Detailed English explanations and complete examples are inside the functions.
+Open [sales_pipeline.py](week03_linear_models/day20_sales_pipeline/sales_pipeline.py): five exercises (~40–45 minutes). Split matching features and targets, standardize three sets using training statistics, repeat fitting, compare on test days, and combine the functions into one pipeline. Reuse the first four functions in the final exercise. Detailed English teaching and complete examples are in the function docstrings.
 
 ```bash
-python -m pytest -q week03_linear_models/day19_heldout_test -k validation_mses
-python -m pytest -q week03_linear_models/day19_heldout_test
+python -m pytest -q week03_linear_models/day20_sales_pipeline -k split_days
+python -m pytest -q week03_linear_models/day20_sales_pipeline
 # All days:
 python -m pytest -q week01_numpy_logreg week02_linear_models week03_linear_models
 ```
 
-Days 1–19 are completed. All 319 tests passed at Day 19 completion, including a regression check for different training and test row counts.
+Days 1–20 are completed. All 334 tests passed at Day 20 completion.
 
 ## Exercise format
+
+Schedule a larger comprehensive pipeline exercise periodically, rather than every day; keep intervening lessons small and progressive.
 
 Use connected scenarios with repeated hands-on NumPy practice, minimizing calls to earlier exercise functions. Keep function type annotations, but omit verbose Inputs/Output blocks from future docstrings. Explain necessary shapes naturally in Learn or example comments. Keep Task to one sentence and show complete, self-contained input/output examples.
 
