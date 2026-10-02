@@ -37,6 +37,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 17 — completed: [validation_report.py](week03_linear_models/day17_validation_report/validation_report.py). Baseline/model predictions, daily errors, MSE reduction, and validation reports; all 14 tests passed.
 
+- Day 18 — completed: [model_selection.py](week03_linear_models/day18_model_selection/model_selection.py). Candidate MSEs, argmin, selected rows, and baseline comparisons; all 15 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -49,18 +51,18 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 18 — completed: select a model using validation MSE
+## Day 19 — completed: select on validation, score the fixed choice on test
 
-Open [model_selection.py](week03_linear_models/day18_model_selection/model_selection.py): five exercises (~40 minutes). Review predictions, compute each candidate's MSE, learn argmin, repeat daily masks, and assemble a selection report. Candidate tables use models as rows and days as columns; the docstrings explain this layout explicitly. No new model or gradient formula.
+Open [heldout_practice.py](week03_linear_models/day19_heldout_test/heldout_practice.py): five exercises (~35–40 minutes). Repeat candidate MSEs, row selection, and argmin; use the validation-selected index to score the same model on separate test days, then compare with the training-mean baseline. Detailed English explanations and complete examples are inside the functions.
 
 ```bash
-python -m pytest -q week03_linear_models/day18_model_selection -k predict_candidate
-python -m pytest -q week03_linear_models/day18_model_selection
+python -m pytest -q week03_linear_models/day19_heldout_test -k validation_mses
+python -m pytest -q week03_linear_models/day19_heldout_test
 # All days:
 python -m pytest -q week01_numpy_logreg week02_linear_models week03_linear_models
 ```
 
-Days 1–18 are completed. All 303 tests passed at Day 18 completion.
+Days 1–19 are completed. All 319 tests passed at Day 19 completion, including a regression check for different training and test row counts.
 
 ## Exercise format
 
