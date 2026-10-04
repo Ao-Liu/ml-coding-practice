@@ -41,6 +41,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 19 — completed: [heldout_practice.py](week03_linear_models/day19_heldout_test/heldout_practice.py). Validation selection, fixed-model test scoring, and baseline comparison; all 16 tests passed after correcting baseline length for unequal training/test sizes.
 
+- Day 20 — completed: [sales_pipeline.py](week03_linear_models/day20_sales_pipeline/sales_pipeline.py). Chronological splitting, train-only preprocessing/fitting, and complete evaluation; all 15 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -53,18 +55,18 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 20 — completed: one chronological sales pipeline
+## Day 21 — completed: a gentle bridge to binary classification
 
-Open [sales_pipeline.py](week03_linear_models/day20_sales_pipeline/sales_pipeline.py): five exercises (~40–45 minutes). Split matching features and targets, standardize three sets using training statistics, repeat fitting, compare on test days, and combine the functions into one pipeline. Reuse the first four functions in the final exercise. Detailed English teaching and complete examples are in the function docstrings.
+Open [binary_days.py](week03_linear_models/day21_binary_labels/binary_days.py): five exercises (~35–40 minutes). Define high-revenue labels, threshold supplied probabilities, compute accuracy, select incorrect day IDs, and make a small report. Reuse comparisons, means, and masks; no sigmoid, training loop, or new gradient formula yet. Detailed English teaching and full examples are in the function docstrings.
 
 ```bash
-python -m pytest -q week03_linear_models/day20_sales_pipeline -k split_days
-python -m pytest -q week03_linear_models/day20_sales_pipeline
+python -m pytest -q week03_linear_models/day21_binary_labels -k revenue_labels
+python -m pytest -q week03_linear_models/day21_binary_labels
 # All days:
 python -m pytest -q week01_numpy_logreg week02_linear_models week03_linear_models
 ```
 
-Days 1–20 are completed. All 334 tests passed at Day 20 completion.
+Days 1–21 are completed. All 350 tests passed at Day 21 completion.
 
 ## Exercise format
 
