@@ -43,6 +43,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 20 — completed: [sales_pipeline.py](week03_linear_models/day20_sales_pipeline/sales_pipeline.py). Chronological splitting, train-only preprocessing/fitting, and complete evaluation; all 15 tests passed.
 
+- Day 21 — completed: [binary_days.py](week03_linear_models/day21_binary_labels/binary_days.py). Binary labels, probability thresholds, accuracy, and daily error masks; all 16 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -55,18 +57,18 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 21 — completed: a gentle bridge to binary classification
+## Day 22 — completed: linear scores, sigmoid, and class predictions
 
-Open [binary_days.py](week03_linear_models/day21_binary_labels/binary_days.py): five exercises (~35–40 minutes). Define high-revenue labels, threshold supplied probabilities, compute accuracy, select incorrect day IDs, and make a small report. Reuse comparisons, means, and masks; no sigmoid, training loop, or new gradient formula yet. Detailed English teaching and full examples are in the function docstrings.
+Open [sigmoid_practice.py](week04_logistic_regression/day22_sigmoid/sigmoid_practice.py): five exercises (~35–40 minutes). Review linear scores, learn sigmoid with numeric reasoning, compute probabilities, threshold labels, and make a small evaluation report. No training or new derivatives yet. Detailed English teaching and complete examples are in the function docstrings.
 
 ```bash
-python -m pytest -q week03_linear_models/day21_binary_labels -k revenue_labels
-python -m pytest -q week03_linear_models/day21_binary_labels
+python -m pytest -q week04_logistic_regression/day22_sigmoid -k linear_scores
+python -m pytest -q week04_logistic_regression/day22_sigmoid
 # All days:
-python -m pytest -q week01_numpy_logreg week02_linear_models week03_linear_models
+python -m pytest -q week01_numpy_logreg week02_linear_models week03_linear_models week04_logistic_regression
 ```
 
-Days 1–21 are completed. All 350 tests passed at Day 21 completion.
+Days 1–22 are completed. All 365 tests passed at Day 22 completion.
 
 ## Exercise format
 
