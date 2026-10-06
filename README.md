@@ -45,6 +45,8 @@ Daily hands-on practice with repeated use of earlier concepts. English explanati
 
 - Day 21 — completed: [binary_days.py](week03_linear_models/day21_binary_labels/binary_days.py). Binary labels, probability thresholds, accuracy, and daily error masks; all 16 tests passed.
 
+- Day 22 — completed: [sigmoid_practice.py](week04_logistic_regression/day22_sigmoid/sigmoid_practice.py). Linear scores, sigmoid probabilities, labels, and accuracy; all 15 tests passed.
+
 The direction remains NumPy → models from scratch → PyTorch and integrated ML coding. Later exercises reuse earlier skills; the daily pace follows actual progress.
 
 ## Setup
@@ -57,18 +59,18 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-## Day 22 — completed: linear scores, sigmoid, and class predictions
+## Day 23 — completed: true-class probability and binary cross entropy
 
-Open [sigmoid_practice.py](week04_logistic_regression/day22_sigmoid/sigmoid_practice.py): five exercises (~35–40 minutes). Review linear scores, learn sigmoid with numeric reasoning, compute probabilities, threshold labels, and make a small evaluation report. No training or new derivatives yet. Detailed English teaching and complete examples are in the function docstrings.
+Open [probability_loss.py](week04_logistic_regression/day23_probability_loss/probability_loss.py): five exercises (~35–40 minutes). Practice p versus 1-p, select the true-class probability, learn negative log with numeric examples, average into BCE, and compare accuracy with loss. No gradients or training yet. Detailed English teaching and full examples are in the function docstrings.
 
 ```bash
-python -m pytest -q week04_logistic_regression/day22_sigmoid -k linear_scores
-python -m pytest -q week04_logistic_regression/day22_sigmoid
+python -m pytest -q week04_logistic_regression/day23_probability_loss -k negative_probabilities
+python -m pytest -q week04_logistic_regression/day23_probability_loss
 # All days:
 python -m pytest -q week01_numpy_logreg week02_linear_models week03_linear_models week04_logistic_regression
 ```
 
-Days 1–22 are completed. All 365 tests passed at Day 22 completion.
+Days 1–23 are completed. All 381 tests passed at Day 23 completion.
 
 ## Exercise format
 
